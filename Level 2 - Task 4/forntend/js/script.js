@@ -30,7 +30,7 @@ function login(email, pass) {
       window.location.href = "home.html";
     },
     error: (err) => {
-      console.log(err);
+      alert(JSON.stringify(err.responseText));
     },
   });
 }
@@ -74,7 +74,7 @@ function register(name, email, pass) {
       window.location.href = "home.html";
     },
     error: (err) => {
-      console.log(err);
+      alert(JSON.stringify(err.responseText));
     },
   });
 }
