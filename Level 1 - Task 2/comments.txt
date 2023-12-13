@@ -1,0 +1,412 @@
+// '<div class="reveal gallery_product col-lg-4 col-md-6 col-sm-12 filter ' +
+          //   res[i].filter +
+          //   '"><div class="container gallery_product_container"><div class="container"><a href="' +
+          //   res[i].code +
+          //   '"class="portfolio-item-link" target="_blank"><p class="portfolio-item-title h3"><strong>' +
+          //   res[i].name +
+          //   '</strong></p><p class="h6 blockquote-footer">' +
+          //   res[i].footer +
+          //   '</p><p class="text-muted h5">' +
+          //   res[i].projectType +
+          //   '</p></a><hr class="heading-hr"><div><a href="' +
+          //   res[i].code +
+          //   '" target="_blank"><span class="btn my-btn">Code</span></a><a href="' +
+          //   res[i].demo +
+          //   '" target="_blank"><span class="btn my-btn">Demo</span></a><span class="btn btn-xs projects-info" data-title="' +
+          //   res[i].name +
+          //   '"data-bs-toggle="modal" data-subtitle="' +
+          //   res[i].projectType +
+          //   '"data-tools="' +
+          //   res[i].tools +
+          //   '"data-description="' +
+          //   res[i].description +
+          //   '"data-source="' +
+          //   res[i].code +
+          //   '"data-demo="' +
+          //   res[i].demo +
+          //   '"data-bs-target="#staticBackdrop"><i class="fas fa-circle-info info-icon"></i></span></div></div></div></div>'
+
+          // const res = [
+// {
+//   filter: "web",
+//   code: "https://github.com/malikhuzafah/mdeicines-restfulapi",
+//   name: "Medicines API",
+//   footer: "Express",
+//   type: "Personal Project",
+//   demo: "https://healthica-api.herokuapp.com",
+//   tools: ["NodeJs", "MongoDB", "Express"],
+//   description:
+//     "A restfull API with information about medicines like name price and quantity etc. with user authentication and authorization.",
+// },
+//   {
+//     filter: "web",
+//     code: "https://github.com/malikhuzafah/healthica-react",
+//     name: "Pharmacy",
+//     footer: "React",
+//     type: "Personal Project",
+//     demo: "https://healthica.herokuapp.com",
+//     tools: ["React", "NodeJs", "MongoDB", "Express"],
+//     description:
+//       "A MERN stack pahramacy app that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization.",
+//   },
+//   {
+//     filter: "",
+//     code: "",
+//     name: "",
+//     footer: "",
+//     type: "Personal Project",
+//     demo: "",
+//     tools: [],
+//     description: "",
+//   },
+//   {
+//     filter: "",
+//     code: "",
+//     name: "",
+//     footer: "",
+//     type: "Personal Project",
+//     demo: "",
+//     tools: [],
+//     description: "",
+//   },
+// ];
+
+
+// const dom = {
+  //   imgContainer: document.querySelector(".images"),
+  //   cur: 0,
+  //   imgHeight: 250,
+  //   isAuto: true,
+  // };
+
+  // function changeImage(dir) {
+  //   var images = $(".images img");
+  //   console.log(images[dom.cur].offsetHeight);
+  //   if (dir == "next") {
+  //     dom.cur++;
+  //     if (dom.cur >= images.length) {
+  //       dom.cur = 0;
+  //     }
+  //   } else {
+  //     dom.cur--;
+  //     if (dom.cur < 0) {
+  //       dom.cur = images.length - 1;
+  //     }
+  //   }
+
+  //   dom.imgContainer.style.top =
+  //     -1 * images[dom.cur].offsetHeight * dom.cur + "px";
+  // }
+
+  // setInterval(() => {
+  //   if (dom.isAuto) {
+  //     changeImage("next");
+  //   }
+  // }, 4000);
+
+
+HTML
+
+   <!-- <li class="nav-item">
+                                <a class="nav-link" id="contact-link" target="_blank"
+                                    href="https://malikhuzafah.hashnode.dev/"><strong>Blog <em
+                                            style="transform: rotate(-135deg);"
+                                            class="fa fa-arrow-down"></em></strong></a>
+                            </li> -->
+
+                                    <!-- <span class="h5 d-none d-lg-block">huzafahrajput10gmail.com</span> -->
+
+                                    <!-- <span class="h5 d-none d-lg-block">linktree</span> -->
+
+                                    <!-- <span class="h5 d-none d-lg-block">+923000361029</span> -->
+
+ <!-- <div class="slider">
+                                <div class="images">
+                                    <img class="img-fluid" src="./images/1.jpg" alt="slider image" height="250"
+                                        width="250">
+                                    <img class="img-fluid" src="./images/2.jpg" alt="slider image" height="250"
+                                        width="250">
+                                    <img class="img-fluid" src="./images/3.jpg" alt="slider image" height="250"
+                                        width=250">
+                                    <img class="img-fluid" src="./images/4.jpg" alt="slider image" height="250"
+                                        width="250">
+                                    <img src="./images/flutter.png" alt="slider image" height="250" width="250">
+                                </div>
+                            </div> -->
+
+<!-- <div class="portfolio-image-container img-fluid">
+                                <img src="./images/pw1.png" alt="medicinesapi" class="portfolio-image img-fluid">
+                                <embed src="https://healthica.herokuapp.com" class="portfolio-image img-fluid">
+                            </div> -->
+
+ <!-- <div class="portfolio-image-container img-fluid">
+                                <img src="./images/pw1.png" alt="medicinesapi" class="portfolio-image img-fluid">
+                            </div> -->
+
+ <!-- <div class="portfolio-image-container img-fluid">
+                                <div class="portfolio-image img-fluid" id="flutter-1"></div>
+                            </div> -->
+
+<!-- <div id="languages">
+            <div class="container text-center">
+                <div>
+                    <span class="title2 h1 text-center"><strong>Languages.</strong></span>
+                    <hr class="heading-hr">
+                </div>
+                <div class="container text-center details">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div class="">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">JavaScript</span>
+                                        <br>
+                                        <span class="blockquote-footer">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Java</span>
+                                        <br>
+                                        <span class="blockquote-footer">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Python</span>
+                                        <br>
+                                        <span class="blockquote-footer">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Dart</span>
+                                        <br>
+                                        <span class="blockquote-footer">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">HTML</span>
+                                        <br>
+                                        <span class="blockquote-footer">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">CSS</span>
+                                        <br>
+                                        <span class="blockquote-footer">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">C</span>
+                                        <br>
+                                        <span class="blockquote-footer">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">C#</span>
+                                        <br>
+                                        <span class="blockquote-footer">Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- <div id="skills">
+            <div class="container text-center">
+                <div class="col-12">
+                    <span class="title2 h1 text-center"><strong>Skills.</strong></span>
+                    <hr class="heading-hr">
+                </div>
+                <div class="container text-center details">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="skills">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">React</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">NodeJs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">ExpressJs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Flutter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h3">MS SQL Server</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Unity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">JQuery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-xs-4 col-6">
+                            <div class="languages">
+                                <div class="container language-circle d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                            height="50px" width="50px" />
+                                        <br>
+                                        <span class="h4">Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+CSS 
+/* background: rgba(26, 26, 29, 0.8);
+  backdrop-filter: blur(0px); */

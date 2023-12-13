@@ -1,0 +1,66 @@
+[
+    {
+        "name":"Flutter - Quiz App",
+        "link":"https://github.com/malikhuzafah/Flutter_Quiz_App",
+        "image": "./images/pf1.png",
+        "filter":"flutter",
+        "main": "Quiz App",
+        "sub": "Flutter"
+    },
+    {
+        "name":"Unity - Roller Madness",
+        "link":"https://github.com/malikhuzafah/RollerMadness/tree/gh-pages",
+        "image": "./images/pu1.png",
+        "filter":"unity",
+        "main": "Roller Madness",
+        "sub": "Unity"
+    },
+    {
+        "name":"Web - YAAS Energy",
+        "link":"https://github.com/malikhuzafah/Yaas/tree/gh-pages/site",
+        "image": "./images/pw1.png",
+        "filter":"web",
+        "main": "YAAS Energy",
+        "sub": "Web"
+    },
+    {
+        "name":"Flutter - Expense Planner",
+        "link":"https://github.com/malikhuzafah/FlutterExpensePlannerApp",
+        "image": "./images/pf2.png",
+        "filter":"flutter",
+        "main": "Expense Planner",
+        "sub": "Flutter"
+    },
+    {
+        "name":"Unity - Solar System",
+        "link":"https://github.com/malikhuzafah/SolarSystemSimulation/tree/gh-pages",
+        "image": "./images/pu2.jpg",
+        "filter":"unity",
+        "main": "Solar System",
+        "sub": "Unity"
+    },
+    {
+        "name":"Flutter - Favorite Meals",
+        "link":"https://github.com/malikhuzafah/FlutterMealsApp",
+        "image": "./images/pf3.png",
+        "filter":"flutter",
+        "main": "Favorite Meals",
+        "sub": "Flutter"
+    },
+    {
+        "name":"Unity - Box Shooter",
+        "link":"https://github.com/malikhuzafah/BoxShooter/tree/gh-pages",
+        "image": "./images/pu3.png",
+        "filter":"unity",
+        "main": "Box Shooter",
+        "sub": "Unity"
+    },
+    {
+        "name":"Flutter - Shop App",
+        "link":"https://github.com/malikhuzafah/BoxShooter/tree/gh-pages",
+        "image": "./images/pf4.png",
+        "filter":"flutter",
+        "main": "Shop App",
+        "sub": "Flutter"
+    }
+]

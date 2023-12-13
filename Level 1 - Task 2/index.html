@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6f2232">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6f2232">
+
+    <link rel="icon" href="./images/man.png">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Nunito&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/themes/dark.css" id="theme">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d32649dfde.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+
+    <title>Huzafah.</title>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="load">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="content">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#top">
+                        <span class="h2"><strong>Huzafah.</strong></span>
+                    </a>
+                    <button class="navbar-toggler" type="button" id="navbar-toggle">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse align-middle show" id="navbarSupportedContent">
+                        <span class="closebtn" id="navbar-close-btn"><i class="fa-solid fa-xmark"></i></span>
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" id="about-link" href="#about"><strong>About Me</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="skills-link" href="#skills"><strong>Skills</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="portfolio-link" href="#portfolio"><strong>Portfolio</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="education-link" href="#education"><strong>Education</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cert-link"
+                                    href="#certifications"><strong>Certifications</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-link" href="#contact"><strong>Contact
+                                        Me</strong></a>
+                            </li>
+                        </ul>
+                        <div id="navbar-git">
+                            <a class="btn my-btn-3 git-btn" href="https://github.com/malikhuzafah" target="_blank">
+                                Github <em class="fa fa-github"></em>
+                            </a>
+                        </div>
+                        <div id="switch-container">
+                            <span class="switch" id="light-switch">
+                                <i class="material-icons">sunny</i>
+                            </span>
+                            <span class="switch" id="dark-switch">
+                                <i class="material-icons">dark_mode</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="topbar">
+                <div class="container w-100" id="topbar-container">
+                    <div class="row w-100" id="topbar-content">
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="container" id="image-border">
+                                <div class="img-fluid" id="image"></div>
+                                <!-- <img src="./images/5.jpg" class="img-fluid" alt="Profile" width="250" height="250"
+                                    id="image"> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-8" id="topbar-about">
+                            <div class="container" id="topbar-about-container">
+                                <span class="h1">
+                                    <strong>Malik Muhammad Huzafah <br class="d-none d-lg-block">Khan</strong>
+                                </span><br>
+                                <span class="h2" id="topbar-subtitle">Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row w-100" id="topbar-contact">
+                        <div class="col-4">
+                            <div class="container text-center">
+                                <a class="link-light" href="mailto:huzafahrajput10@gmail.com">
+                                    <span class="material-icons md-12 h1 top-icons">email</span><br>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="container text-center">
+                                <a class="link-light"
+                                    href="https://www.linkedin.com/in/malik-muhammad-huzafah-khan-568b181b5/"
+                                    target="_blank">
+                                    <span class="material-icons md-12 h1 top-icons">account_circle</span><br>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="conatiner text-center">
+                                <a class="link-light" href=" tel:+923000361029">
+                                    <span class="material-icons md-12 h1 top-icons">phone</span><br>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="about">
+            <div class="container reveal">
+                <div class="" id="about-container">
+                    <div class=" row about-row">
+                        <div class="col-12">
+                            <div id="about-title" class="text-center">
+                                <span class="title2 h4">About Me. </span>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="col-lg-4 col-12" style="display: flex; justify-content: center;
+                        align-items: center;">
+
+                            <div class="text-center img-fluid" id="about-image"
+                                style="height: 250px; width: 250px; z-index: 100;  background-position: center; background-repeat: no-repeat; background-size: contain;">
+                                <!-- <img src="./images/5.jpg" alt="profile image" class="img-fluid" id="about-image"
+                                    height="250" width="250"> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-12 d-flex justify-content-center align-items-center">
+                            <div class="about-bio">
+                                <p class="h2">Hi, I am <strong>Huzafah</strong></p>
+                                <p class="h4">I am a <strong>Full Stack MERN Developer</strong></p>
+                                <p class="text-justify h5" style="text-align: justify;">I am a <strong>Software
+                                        Engineer</strong> with a BSc in
+                                    Software Engineering from COMSATS University, Lahore campus. I have a solid
+                                    foundation in <strong>MongoDB, Express.js, React.js, and Node.js,</strong> and have
+                                    completed several projects to showcase my full-stack <strong>MERN</strong>
+                                    development skills. I am a driven and dedicated engineer, committed to developing
+                                    scalable and efficient web applications. I have a strong understanding of the full
+                                    web development process, from the initial design to the final deployment. I am
+                                    confident that I can use my skills and experience to contribute to the development
+                                    of innovative and user-friendly web applications.
+                                </p>
+                                <a href="https://github.com/malikhuzafah" class="btn my-btn about-btn">View Github <em
+                                        class="fa-solid fa-up-right-from-square"></em></a>
+                                <a href="./download/resume.pdf" class="btn my-btn about-btn" download>Download
+                                    Resume <em class="fa-solid fa-download"></em></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills">
+            <div class="container text-center">
+                <span class="title2 h1"><strong>Skills.</strong></span>
+                <hr class="heading-hr">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="container skills-container reveal">
+                            <div class="text-center">
+                                <span class="h3"><strong>Languages</strong></span>
+                                <hr>
+                            </div>
+                            <div class="container row">
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-javascript-plain"></em> JavaScript</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-java-plain"></em> Java</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-python-plain"></em> Python</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-dart-plain"></em> Dart</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-html5-plain"></em> HTML</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-css3-plain"></em> CSS</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-c-plain"></em> C</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-csharp-plain"></em> C#</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="container skills-container reveal">
+                            <div class="text-center">
+                                <span class="h3"><strong>Web Devlopment</strong></span>
+                                <hr>
+                            </div>
+                            <div class="container row">
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-react-original"></em> React</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-nodejs-plain"></em> NodeJs</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-express-original"></em> Express</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-mongodb-plain"></em> MongoDB</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-jquery-plain"></em> JQuery</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-bootstrap-plain"></em> Bootstrap</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="container skills-container reveal">
+                            <div class="text-center">
+                                <span class="h3"><strong>Mobile App Development</strong></span>
+                                <hr>
+                            </div>
+                            <div class="container row">
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-flutter-plain"></em> Flutter</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-react-plain"></em> React-native</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-firebase-plain"></em> Firebase</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="container skills-container reveal">
+                            <div class="text-center">
+                                <span class="h3"><strong>Game Development</strong></span>
+                                <hr>
+                            </div>
+                            <div class="container row">
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-unity-original"></em> Unity</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-csharp-plain"></em> C#</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="container skills-container reveal">
+                            <div class="text-center">
+                                <span class="h3"><strong>Artificial Intelligence</strong></span>
+                                <hr>
+                            </div>
+                            <div class="container d-flex">
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-python-plain"></em> Python</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="container skills-container reveal">
+                            <div class="text-center">
+                                <span class="h3"><strong>Others</strong></span>
+                                <hr>
+                            </div>
+                            <div class="container d-flex">
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-microsoftsqlserver-plain"></em> MS SQL Server</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="h5"><em class="devicon-git-plain"></em> Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100" id="portfolio">
+            <div class="container text-center">
+                <span class="title2 h1"><strong>Portfolio.</strong></span>
+                <hr class="heading-hr">
+            </div>
+            <div class="container">
+                <div align="center">
+                    <span class="my-btn-2 btn btn-default filter-button btn-active" data-filter="all">All</span>
+                    <span class="my-btn-2 btn btn-default filter-button" data-filter="flutter">Flutter</span>
+                    <span class="my-btn-2 btn btn-default filter-button" data-filter="react-native">React Native</span>
+                    <span class="my-btn-2 btn btn-default filter-button" data-filter="web">Web</span>
+                    <span class="my-btn-2 btn btn-default filter-button" data-filter="unity">Unity</span>
+                </div>
+
+                <div class="row" id="portfolioTiles">
+                    <br>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content container">
+                                <div class="modal-header">
+                                    <div>
+                                        <h4 class="modal-title" id="staticBackdropLabel"></h4>
+                                        <span class="h6 text-muted" id="modal-subtitle"></span>
+                                    </div>
+                                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                                </div>
+                                <div class="modal-body">
+                                    <span class="h6 modal-description-heading">Description:</span>
+                                    <p class="text-justify" id="modal-description"></p>
+                                    <span class="h6 modal-tools-heading">Tools Used:</span>
+                                    <div class="row" id="modal-tools"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="w-100 d-flex justify-content-evenly" align="center" id="modal-buttons">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter web">
+                        <div class="container gallery_product_container" data-title="Pharmacy Web App"
+                            data-bs-toggle="modal" data-subtitle="Personal Project"
+                            data-tools="React NodeJs MongoDB Express"
+                            data-description="A MERN stack pahramacy app that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization."
+                            data-source="https://github.com/malikhuzafah/fanfund" data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>FanFund</strong></p>
+                                <p class="h6 blockquote-footer">MERN & React-native</p>
+                                <p class="text-muted h5">Final Year Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/fanfund" target="_blank">
+                                        <span class="btn my-btn">Backend</span>
+                                    </a>
+                                    <a href="https://github.com/malikhuzafah/fanfund" target="_blank">
+                                        <span class="btn my-btn">Frontend</span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Pharmacy Web App"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="React NodeJs MongoDB Express"
+                                        data-description="A MERN stack pahramacy app that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization."
+                                        data-source="https://github.com/malikhuzafah/healthica-react"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter web">
+                        <div class="container gallery_product_container" data-title="Pharmacy Web App"
+                            data-bs-toggle="modal" data-subtitle="Personal Project"
+                            data-tools="React NodeJs MongoDB Express"
+                            data-description="A MERN stack pahramacy app that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization."
+                            data-source="https://github.com/malikhuzafah/healthica-react"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Pharmacy</strong></p>
+                                <p class="h6 blockquote-footer">React</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/healthica-react" target="_blank">
+                                        <span class="btn my-btn">Code</span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Pharmacy Web App"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="React NodeJs MongoDB Express"
+                                        data-description="A MERN stack pahramacy app that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization."
+                                        data-source="https://github.com/malikhuzafah/healthica-react"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter web">
+                        <div class="container gallery_product_container" data-title="Pharmacy API"
+                            data-bs-toggle="modal" data-subtitle="Semester Project" data-tools="NodeJs MongoDB Express"
+                            data-description="A restfull API with information about medicines like name price and quantity etc. with user authentication and authorization."
+                            data-source="https://github.com/malikhuzafah/medicines-restfulapi"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Pharmacy API</strong></p>
+                                <p class="h6 blockquote-footer">Express</p>
+                                <p class="text-muted h5">Semester Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/mdeicines-restfulapi" target="_blank">
+                                        <span class="btn my-btn">Code</span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Pharmacy API"
+                                        data-bs-toggle="modal" data-subtitle="Semester Project"
+                                        data-tools="NodeJs MongoDB Express"
+                                        data-description="A restfull API with information about medicines like name price and quantity etc. with user authentication and authorization."
+                                        data-source="https://github.com/malikhuzafah/medicines-restfulapi"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter web">
+                        <div class="container gallery_product_container" data-title="Chat Web Application"
+                            data-bs-toggle="modal" data-subtitle="Personal Project"
+                            data-tools="MongoDB Express React NodeJs"
+                            data-description="A chat application made using MERN stack in which users can make account, login to that account and start a chat with other users. Chatting is real-time and is tored on database."
+                            data-source="https://github.com/malikhuzafah/Chat-Application"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Chat Web Application</strong></p>
+                                <p class="h6 blockquote-footer">MERN</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/Chat-Application" target="_blank">
+                                        <span class="btn my-btn">Code</span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Chat Web Application"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="MongoDB Express React NodeJs"
+                                        data-description="A chat application made using MERN stack in which users can make account, login to that account and start a chat with other users. Chatting is real-time and is tored on database."
+                                        data-source="https://github.com/malikhuzafah/Chat-Application"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter web">
+                        <div class="container gallery_product_container" data-title="Sorting Algorithms Visualization"
+                            data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="JQuery Bootstrap"
+                            data-description="A Visualization of some popular Sorting Algorithms"
+                            data-source="https://github.com/malikhuzafah/Sorting-Algorithms"
+                            data-demo="https://malikhuzafah.github.io/Sorting-Algorithms"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Sorting Algorithms Visualization</strong>
+                                </p>
+                                <p class="h6 blockquote-footer">Web</p>
+                                <p class="text-muted h5">Personal Project</p>
+
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/Sorting-Algorithms" target="_blank">
+                                        <span class="btn my-btn">Code</span>
+                                    </a>
+                                    <a href="https://malikhuzafah.github.io/Sorting-Algorithms" target="_blank">
+                                        <span class="btn my-btn">Demo</span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Sorting Algorithms Visualization"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="JQuery Bootstrap"
+                                        data-description="A Visualization of some popular Sorting Algorithms"
+                                        data-source="https://github.com/malikhuzafah/Sorting-Algorithms"
+                                        data-demo="https://malikhuzafah.github.io/Sorting-Algorithms"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter react-native">
+                        <div class="container gallery_product_container" data-title="Pharmacy App"
+                            data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="React-native Firebase"
+                            data-description="A pahramacy app built using react native and firebase that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization."
+                            data-source="https://github.com/malikhuzafah/healthica-react-native"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Pharmacy App</strong></p>
+                                <p class="h6 blockquote-footer">React-native</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/healthica-react-native" target="_blank">
+                                        <span class="btn my-btn">SourceCode
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Pharmacy App"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="React-native Firebase"
+                                        data-description="A pahramacy app built using react native and firebase that lists medicines. The medicines can be added in cart and can be ordered. With user authentication and authorization."
+                                        data-source="https://github.com/malikhuzafah/healthica-react-native"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter flutter">
+                        <div class="container gallery_product_container" data-title="Quiz App" data-bs-toggle="modal"
+                            data-subtitle="Personal Project" data-tools="Flutter"
+                            data-description="A simple mobile application to take a quiz."
+                            data-source="https://github.com/malikhuzafah/Flutter_Quiz_App"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Quiz App</strong></p>
+                                <p class="h6 blockquote-footer">Flutter</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/Flutter_Quiz_App" target="_blank">
+                                        <span class="btn my-btn">SourceCode
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Quiz App" data-bs-toggle="modal"
+                                        data-subtitle="Personal Project" data-tools="Flutter"
+                                        data-description="A simple mobile application to take a quiz."
+                                        data-source="https://github.com/malikhuzafah/Flutter_Quiz_App"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter unity">
+                        <div class="container gallery_product_container" data-title="Roller Madness"
+                            data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="Unity"
+                            data-description="A Game made in unity game engine."
+                            data-source="https://github.com/malikhuzafah/RollerMadness/tree/gh-pages"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Roller Madness</strong></p>
+                                <p class="h6 blockquote-footer">Unity</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/RollerMadness/tree/gh-pages"
+                                        target="_blank">
+                                        <span class="btn my-btn">Source Code
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Roller Madness"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="Unity"
+                                        data-description="A Game made in unity game engine."
+                                        data-source="https://github.com/malikhuzafah/RollerMadness/tree/gh-pages"
+                                        data-bs-target="#staticBackdrop">
+                                        <i class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter web">
+                        <div class="container gallery_product_container" data-title="YAAS Energy" data-bs-toggle="modal"
+                            data-subtitle="Personal Project" data-tools="JQuery Bootstrap"
+                            data-description="Website for YAAS energy pvt.ltd."
+                            data-visit="https://yaas-energy.herokuapp.com" data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>YAAS Energy</strong></p>
+                                <p class="h6 blockquote-footer">Web</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://yaas-energy.herokuapp.com" target="_blank">
+                                        <span class="btn my-btn">
+                                            Visit
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="YAAS Energy"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="JQuery Bootstrap"
+                                        data-description="Website for YAAS energy pvt.ltd."
+                                        data-visit="https://yaas-energy.herokuapp.com" data-bs-target="#staticBackdrop">
+                                        <i class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter flutter">
+                        <div class="container gallery_product_container" data-title="Expense Planner"
+                            data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="Flutter Firebase"
+                            data-description="A mobile application to take track of your expenses."
+                            data-source="https://github.com/malikhuzafah/FlutterExpensePlannerApp"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Expense Planner</strong></p>
+                                <p class="h6 blockquote-footer">Flutter</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/FlutterExpensePlannerApp" target="_blank">
+                                        <span class="btn my-btn">
+                                            Source Code
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Expense Planner"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="Flutter Firebase"
+                                        data-description="A mobile application to take track of your expenses."
+                                        data-source="https://github.com/malikhuzafah/FlutterExpensePlannerApp"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter unity">
+                        <div class="container gallery_product_container" class="btn btn-xs projects-info"
+                            data-title="Solar System Simulation" data-bs-toggle="modal" data-subtitle="Personal Project"
+                            data-tools="Unity" data-description="A Solar System Simulation made in Unity."
+                            data-source="https://github.com/malikhuzafah/SolarSystemSimulation/tree/gh-pages"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Solar System</strong></p>
+                                <p class="h6 blockquote-footer">Unity</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/SolarSystemSimulation/tree/gh-pages"
+                                        target="_blank">
+                                        <span class="btn my-btn">Source Code
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Solar System Simulation"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="Unity"
+                                        data-description="A Solar System Simulation made in Unity."
+                                        data-source="https://github.com/malikhuzafah/SolarSystemSimulation/tree/gh-pages"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter flutter">
+                        <div class="container gallery_product_container" data-title="Favorite Meals App"
+                            data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="Flutter Firebase"
+                            data-description="A Mobile Application that has recipes for Meals. Means can be added to favorites list."
+                            data-source="https://github.com/malikhuzafah/FlutterMealsApp"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Favorite Meals</strong></p>
+                                <p class="h6 blockquote-footer">Flutter</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/FlutterMealsApp" target="_blank">
+                                        <span class="btn my-btn">Source Code
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Favorite Meals App"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project"
+                                        data-tools="Flutter Firebase"
+                                        data-description="A Mobile Application that has recipes for Meals. Means can be added to favorites list."
+                                        data-source="https://github.com/malikhuzafah/FlutterMealsApp"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter unity">
+                        <div class="container gallery_product_container" data-title="Box Shooter" data-bs-toggle="modal"
+                            data-subtitle="Personal Project" data-tools="Unity"
+                            data-description="A Game made in Unity game engine. It is a fps game in which you have to shoot boxes that appear randomly on screen. Each box gives you pints, extra time, points deduction or time deduction."
+                            data-source="https://github.com/malikhuzafah/BoxShooter/tree/gh-pages"
+                            data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Box Shooter</strong></p>
+                                <p class="h6 blockquote-footer">Unity</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/BoxShooter/tree/gh-pages" target="_blank">
+                                        <span class="btn my-btn">Source Code
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Box Shooter"
+                                        data-bs-toggle="modal" data-subtitle="Personal Project" data-tools="Unity"
+                                        data-description="A Game made in Unity game engine. It is a fps game in which you have to shoot boxes that appear randomly on screen. Each box gives you pints, extra time, points deduction or time deduction."
+                                        data-source="https://github.com/malikhuzafah/BoxShooter/tree/gh-pages"
+                                        data-bs-target="#staticBackdrop"> <i
+                                            class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery_product col-lg-4 col-md-6 col-sm-12 filter flutter">
+                        <div class="container gallery_product_container" data-title="Shop App" data-bs-toggle="modal"
+                            data-subtitle="Personal Project" data-tools="Flutter Firebase"
+                            data-description="A Mobile application where sellers can sell their products and customers can buy them."
+                            data-source="https://github.com/malikhuzafah/" data-bs-target="#staticBackdrop">
+                            <div class="container portfolio-item-link">
+                                <p class="portfolio-item-title h3"><strong>Shop App</strong></p>
+                                <p class="h6 blockquote-footer">Flutter</p>
+                                <p class="text-muted h5">Personal Project</p>
+                                <hr class="heading-hr">
+                                <div>
+                                    <a href="https://github.com/malikhuzafah/" target="_blank">
+                                        <span class="btn my-btn">Source Code
+                                            <em class="fa-solid fa-up-right-from-square"></em>
+                                        </span>
+                                    </a>
+                                    <span class="btn btn-xs projects-info" data-title="Shop App" data-bs-toggle="modal"
+                                        data-subtitle="Personal Project" data-tools="Flutter Firebase"
+                                        data-description="A Mobile application where sellers can sell their products and customers can buy them."
+                                        data-source="https://github.com/malikhuzafah/" data-bs-target="#staticBackdrop">
+                                        <i class="fas fa-circle-info info-icon"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a href="https://github.com/malikhuzafah" target="_blank"
+                            class="btn btn-lg my-btn-2 git-btn">View Github
+                            <em class="fa fa-github"></em></a>
+                    </div>
+                    <div class="col-12">
+                        <hr class="heading-hr">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="stats">
+            <div class="container text-center">
+                <span class="title2 h1">Stats.</span>
+                <hr class="heading-hr">
+            </div>
+            <div class="container">
+                <div class="row" align="center">
+                    <div class="col-lg-6 col-12">
+                        <div class="container">
+
+                            <!-- <span class="h2 title2">Code Wars.</span><br>
+                            <img src="https://github-readme-codewars-stats.herokuapp.com/api/?username=malik_huzafah&card&customcolor=bg:2a295b_fg:b500ed_text:fc4646_logo:2a295b_stroke:f75402"
+                                class="img-fluid" alt="Code wars stats"> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="container">
+                            <span class="h2 title2">Github.</span>
+                            <br>
+                            <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=malikhuzafah&show_icons=true&theme=gotham&include_all_commits=true&count_private=true"
+                                class="img-fluid" alt="Code wars stats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="education">
+        <div class="container text-center">
+            <span class="title2 h1 text-center"><strong>Education.</strong></span>
+            <hr class="heading-hr">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <a class="edu-container" href="https://lahore.comsats.edu.pk/default.aspx" target="_blank">
+                        <div class="container text-center">
+                            <img src="./images/e3.png" alt="quid-e-azam" class="img-edu img-fluid" height="200"
+                                width="200">
+                            <p class="h4"><strong>COMSATS University Islamabad</strong></p>
+                            <p class="h5">Bs Software Engineering</p>
+                            <p class="h6"><span class="material-icons md-12 h6">place</span> Lahore, Pakistan</p>
+                            <p class="blockquote-footer">2019 - 2023</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <a class="edu-container" href="https://pgc.edu/" target="_blank">
+                        <div class="container text-center">
+                            <img src="./images/e2.png" alt="quid-e-azam" class="img-edu img-fluid" height="200"
+                                width="200">
+                            <p class="h4"><strong>Punjab Group of Colleges</strong></p>
+                            <p class="h5">Fsc | Pre-Engineering</p>
+                            <p class="h6"><span class="material-icons md-12 h6">place</span> Gujranwala, Pakistan
+                            </p>
+                            <p class="blockquote-footer">2017 - 2019</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <a class="edu-container" href="http://www.qpc.edu.pk/" target="_blank">
+                        <div class="container text-center">
+                            <img src="./images/e1.gif" alt="quid-e-azam" class="img-edu img-fluid" height="200"
+                                width="200">
+                            <p class="h4"><strong>Quid-e-Azam Public College</strong></p>
+                            <p class="h5">Matric | Computer</p>
+                            <p class="h6"><span class="material-icons md-12 h6">place</span> Gujranwala, Pakistan
+                            </p>
+                            <p class="blockquote-footer">2015 - 2017</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="certifications">
+        <div class="container text-center">
+            <span class="title2 h1 text-center"><strong>Certifications.</strong></span>
+            <hr class="heading-hr">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="cert-container reveal container text-center">
+                        <img src="./images/c1.jpeg" alt="c1" class="img-cert img-fluid"><br>
+                        <span class="h4"><strong>Intro to Game Development</strong></span><br>
+                        <span class="blockquote-footer">Coursera</span><br>
+                        <span class="h5">Michigan State University</span><br><br>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/954M9L7VEBKP?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+                            target="_blank">
+                            <span class="my-btn-2 btn btn-lg"><strong>Verify</strong></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="cert-container reveal container text-center">
+                        <img src="./images/c2.jpeg" alt="c2" class="img-cert img-fluid"><br>
+                        <span class="h4"><strong>Priciples of Game Design</strong></span><br>
+                        <span class="blockquote-footer">Coursera</span><br>
+                        <span class="h5">Michigan State University</span><br><br>
+                        <a href="https://coursera.org/share/81cc15ac682fbcc345d5726e373ef6cd" target="_blank">
+                            <span class="my-btn-2 btn btn-lg"><strong>Verify</strong></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="cert-container reveal container text-center">
+                        <img src="./images/c3.jpeg" alt="c2" class="img-cert img-fluid"><br>
+                        <span class="h4"><strong>Business of Games and Enterpreneurship</strong></span><br>
+                        <span class="blockquote-footer">Coursera</span><br>
+                        <span class="h5">Michigan State University</span><br><br>
+                        <a href="https://coursera.org/share/5560945b08f25416447151259e024b31" target="_blank">
+                            <span class="my-btn-2 btn btn-lg">Verify</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="text-center">
+                <span class="title2 h1"><strong>Contact Me.</strong></span>
+                <hr class="heading-hr">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-6">
+                    <div class="container" id="contact-info">
+                        <p class="h2"><strong>Lets Get In Touch.</strong></p>
+                        <p class="text-justify" style="text-align: justify;">I am eager to discuss new projects and
+                            challenges with you. Share as
+                            much information as possible so that I can be fully prepared for our first catch-up. I am
+                            particularly interested in learning more about your team's goals and objectives, as well as
+                            the specific challenges you are facing.</p>
+                        <span class="h4"><strong>Email:</strong></span><br>
+                        <a href="mailto:huzafahrajput10@gmail.com">
+                            <span class="h6">huzafahrajput10gmail.com</span>
+                        </a><br><br>
+                        <span class="h4"><strong>Phone:</strong></span><br>
+                        <a href="tel:+923000361029">
+                            <span class="h6 text-underline">+923000361029</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="container" id="form">
+                        <div>
+                            <p class="h2"><strong>Say hello.</strong></p>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control contact-form" id="name-input"
+                                placeholder="Full Name">
+                            <p id="name-err"></p>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control contact-form" id="email-input"
+                                placeholder="Email Address">
+                            <p id="email-err"></p>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control contact-form" id="msg-input" rows="3"
+                                placeholder="Message"></textarea>
+                            <p id="msg-err"></p>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <span class="h5" id="submitted"></span>
+                            </div>
+                            <div class="col-6 text-end">
+                                <span id="send" class="my-btn-3 btn btn-lg">Send</span>
+                                <div class="spinner-border float-end" role="status" id="spinner">
+                                    <span class="visually-hidden text-end">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" text-center text-white">
+        <div class="row" id="footer">
+            <div class="container">
+                <div class="social-icons spinned">
+                    <a class="item github" href="https://github.com/malikhuzafah" target="_blank"><em
+                            class="fa-brands fa-github"></em></a>
+                    <a class="item linkedin" href="https://www.linkedin.com/in/malik-muhammad-huzafah-khan-568b181b5/"
+                        target="_blank"><em class="fa fa-linkedin"></em></a>
+                    <a class="item facebook" href="https://malikhuzafah.hashnode.dev/" target="_blank"><em
+                            class="fa-solid fa-blog"></em></a>
+                    <br class="d-block d-sm-none">
+                    <a class="item codewars" href="https://www.codewars.com/users/malik_huzafah" target="_blank"><em
+                            class="fa-solid fa-code"></em></a>
+                    <a class="item instagram" href="https://www.instagram.com/malik_huzafah/" target="_blank"><em
+                            class="fa fa-instagram"></em></a>
+                    <a class="item facebook" href="https://www.facebook.com/malik.huzafah" target="_blank"><em
+                            class="fa fa-facebook"></em></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-2" id="copyright">
+            <p>&copy; <em id="date"></em>Huzafah</p>
+        </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>
