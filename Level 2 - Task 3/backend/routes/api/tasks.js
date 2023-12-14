@@ -30,9 +30,11 @@ router.put("/:id", async (req, res) => {
     if (!task) return res.status(400).send("Task with given id is not present");
     task.title = req.body.title;
     task.isCompleted = req.body.isCompleted;
+    console.log(task);
     await task.save();
     return res.send(task);
   } catch (error) {
+    console.log(error);
     return res.status(500).send("Something went wrong!");
   }
 });
@@ -40,11 +42,11 @@ router.put("/:id", async (req, res) => {
 // delete a task
 router.delete("/:id", async (req, res) => {
   try {
-    let task = await Task.findById(req.params.id);
+    let task = await Task.findByIdAndDelete(req.params.id);
     if (!task) return res.status(400).send("Task with given id is not present");
-    await task.delete();
     return res.send(task);
   } catch (error) {
+    console.log(error);
     return res.status(500).send("Something went wrong!");
   }
 });
@@ -54,7 +56,7 @@ router.post("/", async (req, res) => {
   try {
     let task = new Task();
     task.title = req.body.title;
-    task.isCompleted = req.body.isCompleted;
+    task.isCompleted = false;
     await task.save();
     return res.send(task);
   } catch (error) {

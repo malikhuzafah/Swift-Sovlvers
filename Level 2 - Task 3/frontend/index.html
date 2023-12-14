@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6f2232">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6f2232">
+
+    <link rel="icon" href="./images/man.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d32649dfde.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <title>Level 2 - Task 1</title>
+</head>
+
+<body>
+    <a href="#" class="float">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+
+    <div class="topbar">
+        <div class="topbar-bg">
+            <div class="container navigation">
+                <div>
+                    <h3>TODO App</h3>
+                </div>
+                <div>
+                    <a href="#main-content" id="manage">Manage your tasks</a>
+                </div>
+            </div>
+        </div>
+        <div class="add-task-container">
+            <div class="add-input-container">
+                <input type="text" name="title-input" class="form-control add-input" id="title-input"
+                    placeholder="Enter Title">
+            </div>
+            <div class="add-btn-container">
+                <button class="btn btn-dark add-btn" id="add-task">Add Task</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="main-content">
+        <h2 class="text-center tasks-list-title">Tasks List</h2>
+        <div class="filter-btn-container">
+            <button class="btn filter-btn active" id="all-btn">All</button>
+            <button class="btn filter-btn" id="pending-btn">Pending</button>
+            <button class="btn filter-btn" id="completed-btn">Completed</button>
+        </div>
+        <div id="tasks">
+        </div>
+    </div>
+    <div class="modal fade" id="update-modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="update-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Update Task</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="hidden" name="id-update" id="id-update">
+                        <div class="mb-3">
+                            <label for="title-update" class="form-label">Title</label>
+                            <input type="text" name="title-update" class="form-control" id="title-update">
+                        </div>
+                        <div class="mb-3">
+                            <label for="status-update" class="form-label">Status</label>
+                            <select class="form-select" name="status-update" id="isCompleted-update">
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+
+                    </form>
+                    <button class="btn btn-primary" id="update-btn">Update</button>
+                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p class="text-center">Made with <i class="fas fa-heart"></i> by <a href="">Huzafah</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
