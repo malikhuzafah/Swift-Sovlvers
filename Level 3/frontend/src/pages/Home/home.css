@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  min-height: 100vh;
+  height: max-content;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../../../assets/pexels-sydney-troxell-708587.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+
+.main-content {
+  /* width: max-content; */
+  padding: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,1514 @@
+<>
+      {/* <AppBar
+        position="fixed"
+        color="transparent"
+        elevation={0}
+        sx={{ backgroundColor: "transparent" }}
+      >
+        <Toolbar>
+          <IconButton color="inherit" onClick={handleBack}>
+            <ArrowBackIcon />
+          </IconButton>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+            Your Cart
+          </Typography>
+          <IconButton color="inherit" onClick={() => console.log("Open Cart")}>
+            <Badge badgeContent={cartItems.length} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+        </Toolbar>
+      </AppBar> */}
+
+      <Container
+        maxWidth="100%"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          backgroundColor: "#feeceb",
+          color: "black",
+          height: "100vh",
+          overflow: "auto",
+        }}
+      >
+        {/* <Grid item xs={6} sx={{ p: 3 }}>
+          <List>
+            {cartItems.map((item, index) => (
+              <ListItem key={index} sx={{ justifyContent: "space-between" }}>
+                <ListItemText
+                  primary={item.name}
+                  secondary={`Options: ${item.options.pizzaBase}, ${
+                    item.options.sauce
+                  }, ${item.options.cheese}, ${item.options.veggies.join(
+                    ", "
+                  )}`}
+                />
+                <ListItemSecondaryAction
+                  sx={{ display: "flex", alignItems: "center" }}
+                >
+                  <TextField
+                    label="Quantity"
+                    type="number"
+                    value={item.quantity}
+                    onChange={(e) =>
+                      handleQuantityChange(index, parseInt(e.target.value, 10))
+                    }
+                    sx={{ mr: 2 }}
+                  />
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    onClick={() => handleRemoveItem(index)}
+                  >
+                    Remove
+                  </Button>
+                </ListItemSecondaryAction>
+              </ListItem>
+            ))}
+          </List>
+        </Grid>
+        <Grid item xs={6} sx={{ p: 3 }}>
+          <Typography variant="h6" gutterBottom>
+            Address and Payment Form
+          </Typography>
+          <form>
+            <TextField
+              label="Address"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={formData.address}
+              onChange={(e) => handleFormChange("address", e.target.value)}
+            />
+            <TextField
+              label="Payment Method"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              select
+              value={formData.paymentMethod}
+              onChange={(e) =>
+                handleFormChange("paymentMethod", e.target.value)
+              }
+            >
+              <MenuItem value="Credit Card">Credit Card</MenuItem>
+              <MenuItem value="PayPal">PayPal</MenuItem>
+            </TextField>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleOrderSubmit}
+            >
+              Place Order
+            </Button>
+          </form>
+        </Grid> */}
+
+        <Grid container>
+          <Grid item xs>
+            <List
+              style={{
+                marginTop: "10%",
+                marginLeft: "10%",
+                marginRight: "10%",
+                // height: "80vh",
+                // overflow: "auto",
+              }}
+            >
+              {cartItems.map((item, index) => (
+                <ListItem
+                  key={index}
+                  sx={{ justifyContent: "space-between" }}
+                  style={{
+                    backgroundColor: "#fff",
+                    borderRadius: "10px",
+                    marginBottom: "10px",
+                    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <ListItemText
+                    primary={item.name}
+                    secondary={`Options: ${item.options.pizzaBase}, ${
+                      item.options.sauce
+                    }, ${item.options.cheese}, ${item.options.veggies.join(
+                      ", "
+                    )}`}
+                  />
+                  <ListItemSecondaryAction
+                    sx={{ display: "flex", alignItems: "center" }}
+                  >
+                    {/* <IconButton
+                      color="inherit"
+                      onClick={() => handleRemoveItem(index)}
+                    >
+                      <AddIcon />
+                    </IconButton> */}
+
+                    {/* <Typography
+                      variant="h6"
+                      sx={{
+                        mr: 2,
+                        ml: 2,
+                      }}
+                    >
+                      {item.quantity}
+                    </Typography> */}
+                    <input
+                      type="number"
+                      value={item.quantity}
+                      min={1}
+                      max={10}
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        fontSize: "20px",
+                        textAlign: "center",
+                        borderRadius: "5px",
+                        border: "1px solid #000",
+                        marginRight: "10px",
+                        marginLeft: "10px",
+                      }}
+                      onChange={(e) =>
+                        handleQuantityChange(
+                          index,
+                          parseInt(e.target.value, 10)
+                        )
+                      }
+                    />
+                    {/* <IconButton
+                      color="inherit"
+                      onClick={() => handleRemoveItem(index)}
+                    >
+                      <RemoveIcon />
+                    </IconButton> */}
+                    {/* <TextField
+                      label="Quantity"
+                      type="number"
+                      value={item.quantity}
+                      onChange={(e) =>
+                        handleQuantityChange(
+                          index,
+                          parseInt(e.target.value, 10)
+                        )
+                      }
+                      sx={{ mr: 2 }}
+                    /> */}
+                    <IconButton color="inherit" onClick={() => {}}>
+                      <DeleteIcon />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+          <Divider
+            orientation="vertical"
+            flexItem
+            style={{
+              height: "100%",
+            }}
+          />
+          <Grid item xs style={{ overflowY: "auto" }}>
+            content
+          </Grid>
+        </Grid>
+      </Container>
+    </>
+
+
+
+
+    Strart Order:
+
+    // import * as React from "react";
+// import { useState } from "react";
+// import {
+//   TextField,
+//   Button,
+//   Typography,
+//   Box,
+//   FormControl,
+//   InputLabel,
+//   Select,
+//   MenuItem,
+//   FormControlLabel,
+//   FormGroup,
+//   Checkbox,
+//   Grid,
+// } from "@mui/material";
+// import { Link } from "react-router-dom";
+// import "./startOrder.css";
+
+// const StartOrder = () => {
+//   const [selectedVeggies, setSelectedVeggies] = useState([]);
+//   const veggieOptions = [
+//     "Tomatoes",
+//     "Olives",
+//     "Mushrooms",
+//     "Bell Peppers",
+//     "Onions",
+//     "Spinach",
+//     "Broccoli",
+//     "Jalapeños",
+//   ];
+
+//   const handleCheckboxChange = (veggie) => {
+//     if (selectedVeggies.includes(veggie)) {
+//       setSelectedVeggies(selectedVeggies.filter((v) => v !== veggie));
+//     } else {
+//       setSelectedVeggies([...selectedVeggies, veggie]);
+//     }
+//   };
+
+//   return (
+//     <div className="main">
+//       <div className="main-content" style={{ width: "60%" }}>
+//         <div className="pad10 text-center">
+//           <Box width="50%" mx="auto">
+//             <FormControl fullWidth>
+//               <InputLabel id="demo-simple-select-label">Age</InputLabel>
+//               <Select
+//                 labelId="demo-simple-select-label"
+//                 id="demo-simple-select"
+//                 //   value={age}
+//                 label="Age"
+//                 //   onChange={handleChange}
+//               >
+//                 <MenuItem value={10}>Ten</MenuItem>
+//                 <MenuItem value={20}>Twenty</MenuItem>
+//                 <MenuItem value={30}>Thirty</MenuItem>
+//               </Select>
+//             </FormControl>
+//           </Box>
+//         </div>
+//         <div className="pad10 text-center">
+//           <Box width="50%" mx="auto">
+//             <FormControl fullWidth>
+//               <InputLabel id="demo-simple-select-label">Age</InputLabel>
+//               <Select
+//                 labelId="demo-simple-select-label"
+//                 id="demo-simple-select"
+//                 //   value={age}
+//                 label="Age"
+//                 //   onChange={handleChange}
+//               >
+//                 <MenuItem value={10}>Ten</MenuItem>
+//                 <MenuItem value={20}>Twenty</MenuItem>
+//                 <MenuItem value={30}>Thirty</MenuItem>
+//               </Select>
+//             </FormControl>
+//           </Box>
+//         </div>
+//         <div className="pad10 text-center">
+//           <Box width="50%" mx="auto">
+//             <FormControl fullWidth>
+//               <InputLabel id="demo-simple-select-label">Age</InputLabel>
+//               <Select
+//                 labelId="demo-simple-select-label"
+//                 id="demo-simple-select"
+//                 //   value={age}
+//                 label="Age"
+//                 //   onChange={handleChange}
+//               >
+//                 <MenuItem value={10}>Ten</MenuItem>
+//                 <MenuItem value={20}>Twenty</MenuItem>
+//                 <MenuItem value={30}>Thirty</MenuItem>
+//               </Select>
+//             </FormControl>
+//           </Box>
+//         </div>
+//         <div>
+//           <FormControl fullWidth sx={{ mt: 2 }}>
+//             <FormGroup>
+//               <InputLabel>Veggies</InputLabel>
+//               <Grid container spacing={2}>
+//                 {veggieOptions.map((veggie, index) => (
+//                   <Grid key={index} item xs={6} md={4}>
+//                     <FormControlLabel
+//                       control={
+//                         <Checkbox
+//                           checked={selectedVeggies.includes(veggie)}
+//                           onChange={() => handleCheckboxChange(veggie)}
+//                         />
+//                       }
+//                       label={veggie}
+//                     />
+//                   </Grid>
+//                 ))}
+//               </Grid>
+//             </FormGroup>
+//           </FormControl>
+//         </div>
+//         <div className="pad10 text-center">
+//           <Button
+//             style={{ borderRadius: 25 }}
+//             variant="contained"
+//             color="primary"
+//             sx={{
+//               color: "#efeee5",
+//               backgroundColor: "#6f2232",
+//               ":hover": {
+//                 backgroundColor: "#1a1a1d",
+//               },
+//             }}
+//           >
+//             Start Order
+//           </Button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default StartOrder;
+import React, { useState } from "react";
+import {
+  Container,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Checkbox,
+  FormGroup,
+  FormControlLabel,
+  Button,
+  Grid,
+  Typography,
+  useTheme,
+  useMediaQuery,
+  TextField,
+  FormHelperText,
+  Snackbar,
+  Alert,
+  Radio,
+  RadioGroup,
+  FormLabel,
+} from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import SendIcon from "@mui/icons-material/Send";
+import { Link, useNavigate } from "react-router-dom";
+
+const StartOrder = () => {
+  const theme = useTheme();
+  const navigate = useNavigate();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [pizzaBase, setPizzaBase] = useState("");
+  const [sauce, setSauce] = useState("");
+  const [cheese, setCheese] = useState("");
+  const [selectedVeggies, setSelectedVeggies] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+  const [orderItems, setOrderItems] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [size, setSize] = useState("small");
+
+  const [pizzaBaseError, setPizzaBaseError] = useState(false);
+  const [sauceError, setSauceError] = useState(false);
+  const [cheeseError, setCheeseError] = useState(false);
+  const [veggiesError, setVeggiesError] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const pizzaBases = [
+    "Thin Crust",
+    "Thick Crust",
+    "Whole Wheat",
+    "Gluten-Free",
+    "Cauliflower Crust",
+  ];
+  const sauceOptions = ["Tomato", "Pesto", "Alfredo", "BBQ", "Garlic Parmesan"];
+  const cheeseOptions = [
+    "Mozzarella",
+    "Cheddar",
+    "Parmesan",
+    "Provolone",
+    "Gouda",
+  ];
+  const veggieOptions = [
+    "Tomatoes",
+    "Olives",
+    "Mushrooms",
+    "Bell Peppers",
+    "Onions",
+    "Spinach",
+    "Broccoli",
+    "Jalapeños",
+  ];
+
+  const handleCheckboxChange = (veggie) => {
+    if (selectedVeggies.includes(veggie)) {
+      setSelectedVeggies(selectedVeggies.filter((v) => v !== veggie));
+    } else {
+      setSelectedVeggies([...selectedVeggies, veggie]);
+    }
+  };
+
+  const handleSubmit = () => {
+    // Add your logic for submitting the pizza order
+    navigate("/cart");
+    console.log("Pizza Order:", { pizzaBase, sauce, cheese, selectedVeggies });
+  };
+
+  const handleValidate = () => {
+    // Add your logic for validating the pizza order
+    console.log("Validating Pizza Order:", {
+      pizzaBase,
+      sauce,
+      cheese,
+      selectedVeggies,
+    });
+    var flag = true;
+
+    if (pizzaBase === "") {
+      setPizzaBaseError(true);
+      flag = false;
+    } else {
+      setPizzaBaseError(false);
+    }
+
+    if (sauce === "") {
+      setSauceError(true);
+      flag = false;
+    } else {
+      setSauceError(false);
+    }
+
+    if (cheese === "") {
+      setCheeseError(true);
+      flag = false;
+    } else {
+      setCheeseError(false);
+    }
+
+    if (selectedVeggies.length === 0) {
+      setVeggiesError(true);
+      flag = false;
+    } else {
+      setVeggiesError(false);
+    }
+
+    return flag;
+  };
+
+  const handleAddToOrder = () => {
+    if (!handleValidate()) {
+      return;
+    }
+    // Add the current pizza to the orderItems array
+    const newOrderItem = {
+      pizzaBase,
+      sauce,
+      cheese,
+      selectedVeggies,
+      quantity,
+    };
+
+    setOrderItems([...orderItems, newOrderItem]);
+    setOpen(true);
+
+    // Reset the form fields for the next pizza
+    setPizzaBase("");
+    setSauce("");
+    setCheese("");
+    setSelectedVeggies([]);
+    setQuantity(1);
+  };
+
+  const handleBack = () => {
+    window.history.back();
+  };
+
+  const handleSizeChange = (event) => {
+    setSize(event.target.value);
+  };
+
+  return (
+    <>
+      {/* <AppBar
+        position="fixed"
+        color="transparent"
+        elevation={0}
+        sx={{ backgroundColor: "#feeceb" }}
+      >
+        <Toolbar>
+          <IconButton color="inherit" onClick={handleBack}>
+            <ArrowBackIcon />
+          </IconButton>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+            Pizza Shop
+          </Typography>
+          <IconButton color="inherit" onClick={() => console.log("Open Cart")}>
+            <ShoppingCartIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar> */}
+      <Snackbar
+        autoHideDuration={6000}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={open}
+        onClose={handleClose}
+      >
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          sx={{ width: "100%" }}
+          // style={{
+          //   backgroundColor: "#6f2232",
+          // }}
+          variant="filled"
+        >
+          Pizza added to cart!
+        </Alert>
+      </Snackbar>
+      <div className="main">
+        <Container
+          sx={{
+            //   display: "flex",
+            //   flexDirection: "column",
+            //   alignItems: "center",
+            //   justifyContent: "center",
+            backgroundColor: "#feeceb",
+            color: "black",
+            padding: isSmallScreen ? "20px" : "40px 0",
+            //   height: "auto",
+            minHeight: isSmallScreen ? "100vh" : "max-content",
+            marginTop: isSmallScreen ? "0" : "64px",
+            //   position: "absolute",
+            //   top: "50%",
+            //   left: "50%",
+            //   transform: "translate(-50%, -50%)",
+            width: isSmallScreen ? "100%" : "80%",
+            borderRadius: isSmallScreen ? "0" : "10px",
+          }}
+        >
+          {/* <Grid container alignItems="center" spacing={2}>
+            <Grid item>
+              <IconButton onClick={handleBack} sx={{ color: "black" }}>
+                <ArrowBackIcon />
+              </IconButton>
+            </Grid>
+            <Grid item xs={12} textAlign="center">
+            </Grid>
+          </Grid> */}
+
+          <Typography variant="h6">Select your pizza</Typography>
+
+          <FormControl
+            fullWidth
+            sx={{ mt: 2, width: "100%" }}
+            error={pizzaBaseError}
+          >
+            <InputLabel required>Pizza Base</InputLabel>
+            <Select
+              value={pizzaBase}
+              label="Pizza Base"
+              onChange={(e) => setPizzaBase(e.target.value)}
+            >
+              {pizzaBases.map((base, index) => (
+                <MenuItem key={index} value={base}>
+                  {base}
+                </MenuItem>
+              ))}
+            </Select>
+            {pizzaBaseError && (
+              <FormHelperText error>Please select a pizza base</FormHelperText>
+            )}
+          </FormControl>
+
+          <FormControl
+            fullWidth
+            sx={{ mt: 2, width: "100%" }}
+            error={sauceError}
+          >
+            <InputLabel required>Sauce</InputLabel>
+            <Select
+              value={sauce}
+              label="Sauce"
+              onChange={(e) => setSauce(e.target.value)}
+            >
+              {sauceOptions.map((sauceType, index) => (
+                <MenuItem key={index} value={sauceType}>
+                  {sauceType}
+                </MenuItem>
+              ))}
+            </Select>
+            {sauceError && (
+              <FormHelperText error>Please select a sauce</FormHelperText>
+            )}
+          </FormControl>
+
+          <FormControl
+            fullWidth
+            sx={{ mt: 2, width: "100%" }}
+            error={cheeseError}
+          >
+            <InputLabel required>Cheese</InputLabel>
+            <Select
+              value={cheese}
+              label="Cheese"
+              onChange={(e) => setCheese(e.target.value)}
+            >
+              {cheeseOptions.map((cheeseType, index) => (
+                <MenuItem key={index} value={cheeseType}>
+                  {cheeseType}
+                </MenuItem>
+              ))}
+            </Select>
+            {cheeseError && (
+              <FormHelperText error>Please select cheese</FormHelperText>
+            )}
+          </FormControl>
+
+          <FormControl fullWidth sx={{ mt: 2, width: "100%" }}>
+            <Typography
+              style={{
+                color: veggiesError ? "#ff604f" : "#000",
+              }}
+            >
+              Veggies *
+            </Typography>
+            <FormGroup>
+              <Grid container spacing={2}>
+                {veggieOptions.map((veggie, index) => (
+                  <Grid key={index} item xs={6} md={4} lg={3}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          checked={selectedVeggies.includes(veggie)}
+                          onChange={() => handleCheckboxChange(veggie)}
+                        />
+                      }
+                      label={veggie}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+            </FormGroup>
+            {veggiesError && (
+              <FormHelperText error>
+                Please select at least 1 veggie
+              </FormHelperText>
+            )}
+          </FormControl>
+          <FormControl>
+            <FormLabel id="demo-row-radio-buttons-group-label">Size</FormLabel>
+            <RadioGroup
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+              defaultValue="small"
+              value={size}
+              onChange={handleSizeChange}
+            >
+              <FormControlLabel
+                value="small"
+                control={<Radio />}
+                label="Small"
+              />
+              <FormControlLabel
+                value="medium"
+                control={<Radio />}
+                label="Medium"
+              />
+              <FormControlLabel
+                value="large"
+                control={<Radio />}
+                label="Large"
+              />
+            </RadioGroup>
+          </FormControl>
+          <TextField
+            label="Quantity"
+            type="number"
+            fullWidth
+            value={quantity}
+            onChange={(e) =>
+              setQuantity(Math.max(1, parseInt(e.target.value, 10)))
+            } // Ensure quantity is at least 1
+            sx={{ mt: 2 }}
+          />
+
+          <Grid
+            container
+            spacing={2}
+            sx={{ mt: 2 }}
+            justifyContent="space-between"
+          >
+            <Grid item sx={{ width: "48%" }}>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleAddToOrder}
+                fullWidth
+                sx={{
+                  color: "#efeee5",
+                  backgroundColor: "#6f2232",
+                  ":hover": {
+                    backgroundColor: "#1a1a1d",
+                  },
+                  borderRadius: 25,
+                }}
+                startIcon={<AddIcon />}
+              >
+                Add to Cart
+              </Button>
+            </Grid>
+            <Grid item sx={{ width: "48%" }}>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleSubmit}
+                fullWidth
+                sx={{
+                  color: "#efeee5",
+                  backgroundColor: "#6f2232",
+                  ":hover": {
+                    backgroundColor: "#1a1a1d",
+                  },
+                  borderRadius: 25,
+                }}
+                endIcon={<SendIcon />}
+              >
+                Place Order
+                {/* <Link to="/cart" style={{ color: "#efeee5" }}>
+                Place Order
+              </Link> */}
+              </Button>
+            </Grid>
+          </Grid>
+
+          {/* <Button
+       variant="contained"
+       color="primary"
+       onClick={handleSubmit}
+       sx={{
+         color: "#efeee5",
+         backgroundColor: "#6f2232",
+         ":hover": {
+           backgroundColor: "#1a1a1d",
+         },
+         borderRadius: 25,
+         padding: "10px 20px",
+         marginTop: "30px",
+       }}
+     >
+       Place Order
+     </Button>
+     <Button
+       variant="contained"
+       color="primary"
+       onClick={handleSubmit}
+       sx={{
+         color: "#efeee5",
+         backgroundColor: "#6f2232",
+         ":hover": {
+           backgroundColor: "#1a1a1d",
+         },
+         borderRadius: 25,
+         padding: "10px 20px",
+         marginTop: "30px",
+       }}
+     >
+       Place Order
+     </Button> */}
+        </Container>
+      </div>
+    </>
+  );
+};
+
+export default StartOrder;
+
+
+
+
+cart:
+import React, { useState } from "react";
+import {
+  Container,
+  Typography,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemSecondaryAction,
+  Button,
+  TextField,
+  Grid,
+  MenuItem,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useTheme, useMediaQuery } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+const Cart = () => {
+  const navigate = useNavigate();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [cartItems, setCartItems] = useState([
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    {
+      name: "Custom Pizza 1",
+      options: {
+        pizzaBase: "Thin Crust",
+        sauce: "Tomato",
+        cheese: "Mozzarella",
+        veggies: ["Tomatoes", "Olives"],
+      },
+      quantity: 2,
+    },
+    // Add more items as needed
+  ]);
+
+  const [formData, setFormData] = useState({
+    address: "",
+    paymentMethod: "Credit Card",
+  });
+
+  const handleQuantityChange = (index, newQuantity) => {
+    const newCartItems = [...cartItems];
+    newCartItems[index].quantity = newQuantity;
+    setCartItems(newCartItems);
+  };
+
+  const handleRemoveItem = (index) => {
+    const newCartItems = cartItems.filter((_, i) => i !== index);
+    setCartItems(newCartItems);
+  };
+
+  const handleFormChange = (field, value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
+
+  const handleOrderSubmit = async () => {
+    console.log("Order Submitted:", { cartItems, formData });
+    const clientSecret = await axios.get(
+      "http://localhost:3001/api/payments/secret"
+    );
+    navigate("/checkout", { state: clientSecret.data.client_secret });
+  };
+
+  return (
+    // <Container
+    //   // maxWidth="md"
+    //   maxWidth="xl"
+    //   sx={{
+    //     display: "flex",
+    //     flexDirection: "column",
+    //     alignItems: "center",
+    //     paddingTop: "2%",
+    //     marginTop: "60px",
+    //     margin: "0",
+    //     width: "100%",
+    //   }}
+    // >
+    //   <Typography variant="h4" gutterBottom>
+    //     Your Cart
+    //   </Typography>
+    //   <div
+    //     style={{
+    //       display: "flex",
+    //       flexDirection: "row",
+    //       justifyContent: "space-between",
+    //       width: "100%",
+    //     }}
+    //   >
+    //     <Accordion>
+    //       <AccordionSummary
+    //         expandIcon={<ExpandMoreIcon />}
+    //         aria-controls="panel1a-content"
+    //         id="panel1a-header"
+    //       >
+    //         <Typography>Accordion 1</Typography>
+    //       </AccordionSummary>
+    //       <AccordionDetails>
+    //         <List>
+    //           {cartItems.map((item, index) => (
+    //             <ListItem key={index} divider>
+    //               <ListItemText
+    //                 primary={item.name}
+    //                 secondary={`Options: ${item.options.pizzaBase}, ${
+    //                   item.options.sauce
+    //                 }, ${item.options.cheese}, ${item.options.veggies.join(
+    //                   ", "
+    //                 )}`}
+    //               />
+    //               <TextField
+    //                 label="Quantity"
+    //                 type="number"
+    //                 value={item.quantity}
+    //                 onChange={(e) =>
+    //                   handleQuantityChange(index, parseInt(e.target.value, 10))
+    //                 }
+    //               />
+    //               <IconButton onClick={() => handleRemoveItem(index)}>
+    //                 <DeleteIcon />
+    //               </IconButton>
+    //             </ListItem>
+    //           ))}
+    //         </List>
+    //       </AccordionDetails>
+    //     </Accordion>
+
+    //     <Divider orientation="vertical" flexItem />
+    //     <div style={{ width: "49%" }}>
+    //       <Typography variant="h6">Address and Payment Form</Typography>
+    //       <TextField
+    //         label="Address"
+    //         value={formData.address}
+    //         onChange={(e) => handleFormChange("address", e.target.value)}
+    //         fullWidth
+    //         margin="normal"
+    //       />
+    //       <TextField
+    //         select
+    //         label="Payment Method"
+    //         value={formData.paymentMethod}
+    //         onChange={(e) => handleFormChange("paymentMethod", e.target.value)}
+    //         fullWidth
+    //         margin="normal"
+    //       >
+    //         <MenuItem value="Credit Card">Credit Card</MenuItem>
+    //         <MenuItem value="Debit Card">Debit Card</MenuItem>
+    //         <MenuItem value="Cash">Cash</MenuItem>
+    //       </TextField>
+    //       <Button
+    //         variant="contained"
+    //         color="primary"
+    //         fullWidth
+    //         onClick={handleOrderSubmit}
+    //       >
+    //         Place Order
+    //       </Button>
+    //     </div>
+    //   </div>
+    // </Container>
+    <>
+      {/* <AppBar
+        position="fixed"
+        color="transparent"
+        elevation={0}
+        sx={{ backgroundColor: "transparent" }}
+      >
+        <Toolbar>
+          <IconButton color="inherit" onClick={handleBack}>
+            <ArrowBackIcon />
+          </IconButton>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+            Your Cart
+          </Typography>
+          <IconButton color="inherit" onClick={() => console.log("Open Cart")}>
+            <Badge badgeContent={cartItems.length} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+        </Toolbar>
+      </AppBar> */}
+
+      <Container
+        maxWidth="100%"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          backgroundColor: "#feeceb",
+          color: "black",
+          height: "100vh",
+          overflowY: "scroll",
+        }}
+      >
+        {/* <Grid item xs={6} sx={{ p: 3 }}>
+          <List>
+            {cartItems.map((item, index) => (
+              <ListItem key={index} sx={{ justifyContent: "space-between" }}>
+                <ListItemText
+                  primary={item.name}
+                  secondary={`Options: ${item.options.pizzaBase}, ${
+                    item.options.sauce
+                  }, ${item.options.cheese}, ${item.options.veggies.join(
+                    ", "
+                  )}`}
+                />
+                <ListItemSecondaryAction
+                  sx={{ display: "flex", alignItems: "center" }}
+                >
+                  <TextField
+                    label="Quantity"
+                    type="number"
+                    value={item.quantity}
+                    onChange={(e) =>
+                      handleQuantityChange(index, parseInt(e.target.value, 10))
+                    }
+                    sx={{ mr: 2 }}
+                  />
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    onClick={() => handleRemoveItem(index)}
+                  >
+                    Remove
+                  </Button>
+                </ListItemSecondaryAction>
+              </ListItem>
+            ))}
+          </List>
+        </Grid>
+        <Grid item xs={6} sx={{ p: 3 }}>
+          <Typography variant="h6" gutterBottom>
+            Address and Payment Form
+          </Typography>
+          <form>
+            <TextField
+              label="Address"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={formData.address}
+              onChange={(e) => handleFormChange("address", e.target.value)}
+            />
+            <TextField
+              label="Payment Method"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              select
+              value={formData.paymentMethod}
+              onChange={(e) =>
+                handleFormChange("paymentMethod", e.target.value)
+              }
+            >
+              <MenuItem value="Credit Card">Credit Card</MenuItem>
+              <MenuItem value="PayPal">PayPal</MenuItem>
+            </TextField>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleOrderSubmit}
+            >
+              Place Order
+            </Button>
+          </form>
+        </Grid> */}
+
+        <Grid
+          container
+          // spacing={2}
+          style={
+            {
+              // padding: "10px 10px",
+              // height: "80vh",
+              // overflow: "auto",
+            }
+          }
+        >
+          {/* <Divider
+            orientation="vertical"
+            flexItem
+            style={{
+              height: "80vh",
+            }}
+          /> */}
+          <Grid
+            item
+            xs={12}
+            md={6}
+            style={{
+              overflowY: "auto",
+              padding: "50px 20px 0 20px",
+            }}
+          >
+            <Typography variant="h6" gutterBottom style={{ marginTop: "10%" }}>
+              Address and Payment Form
+            </Typography>
+            <TextField
+              label="Address"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={formData.address}
+              onChange={(e) => handleFormChange("address", e.target.value)}
+            />
+            <TextField
+              label="Payment Method"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              select
+              value={formData.paymentMethod}
+              onChange={(e) =>
+                handleFormChange("paymentMethod", e.target.value)
+              }
+            >
+              <MenuItem value="Credit Card">Credit Card</MenuItem>
+              <MenuItem value="PayPal">PayPal</MenuItem>
+            </TextField>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleOrderSubmit}
+            >
+              Place Order
+            </Button>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            style={{ padding: isSmallScreen ? "10px 10px" : "50px 20px" }}
+          >
+            <Accordion
+              defaultExpanded={true}
+              style={{
+                marginTop: "10%",
+                // marginLeft: "10%",
+                // marginRight: "10%",
+                // height: "80vh",
+                // overflow: "auto",
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                sx={{}}
+              >
+                <Typography variant="h6" gutterBottom>
+                  Cart Items
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                {/* <Typography
+                  variant="h6"
+                  gutterBottom
+                  style={{
+                    marginTop: "10%",
+                  }}
+                >
+                  Cart Items
+                </Typography> */}
+                <List
+                  style={
+                    {
+                      // height: "80vh",
+                    }
+                  }
+                >
+                  {cartItems.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{ justifyContent: "space-between" }}
+                      style={{
+                        backgroundColor: "#fff",
+                        borderRadius: "10px",
+                        marginBottom: "10px",
+                        boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                      }}
+                    >
+                      <ListItemText
+                        primary={item.name}
+                        secondary={`Options: ${item.options.pizzaBase}, ${
+                          item.options.sauce
+                        }, ${item.options.cheese}, ${item.options.veggies.join(
+                          ", "
+                        )}`}
+                      />
+                      <ListItemSecondaryAction
+                        sx={{ display: "flex", alignItems: "center" }}
+                      >
+                        {/* <IconButton
+                      color="inherit"
+                      onClick={() => handleRemoveItem(index)}
+                    >
+                      <AddIcon />
+                    </IconButton> */}
+
+                        {/* <Typography
+                      variant="h6"
+                      sx={{
+                        mr: 2,
+                        ml: 2,
+                      }}
+                    >
+                      {item.quantity}
+                    </Typography> */}
+                        <input
+                          type="number"
+                          value={item.quantity}
+                          min={1}
+                          max={10}
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            fontSize: "20px",
+                            textAlign: "center",
+                            borderRadius: "5px",
+                            border: "1px solid #000",
+                            marginRight: "10px",
+                            marginLeft: "10px",
+                          }}
+                          onChange={(e) =>
+                            handleQuantityChange(
+                              index,
+                              parseInt(e.target.value, 10)
+                            )
+                          }
+                        />
+                        {/* <IconButton
+                      color="inherit"
+                      onClick={() => handleRemoveItem(index)}
+                    >
+                      <RemoveIcon />
+                    </IconButton> */}
+                        {/* <TextField
+                      label="Quantity"
+                      type="number"
+                      value={item.quantity}
+                      onChange={(e) =>
+                        handleQuantityChange(
+                          index,
+                          parseInt(e.target.value, 10)
+                        )
+                      }
+                      sx={{ mr: 2 }}
+                    /> */}
+                        <IconButton color="inherit" onClick={() => {}}>
+                          <DeleteIcon />
+                        </IconButton>
+                      </ListItemSecondaryAction>
+                    </ListItem>
+                  ))}
+                </List>
+              </AccordionDetails>
+            </Accordion>
+          </Grid>
+        </Grid>
+      </Container>
+    </>
+  );
+};
+
+export default Cart;
+
+
+cart model:
+
+const mongoose = require("mongoose");
+
+const cartSchema = new mongoose.Schema(
+  {
+    userId: String,
+    items: [
+      {
+        base: String,
+        sauce: String,
+        cheese: String,
+        veggies: [String],
+        size: String,
+        price: Number,
+        quantity: {
+          type: Number,
+          required: true,
+        },
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
+
+const Cart = mongoose.model("Cart", cartSchema);
+
+module.exports = Cart;
+
+
+carts route:
+const express = require("express");
+const router = express.Router();
+const Cart = require("../../models/cart");
+const auth = require("../../middleware/auth");
+
+// get cart
+router.get("/", auth, async (req, res) => {
+  try {
+    const cart = await Cart.findOne({ userId: req.user._id });
+    if (!cart) return res.status(400).send("Cart not found");
+    res.send(cart);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).send("Something went wrong!");
+  }
+});
+
+// add item to cart
+router.post("/", auth, async (req, res) => {
+  try {
+    let cart = await Cart.findOne({ userId: req.user._id });
+    if (!cart) {
+      cart = new Cart();
+      cart.userId = req.user._id;
+      cart.items.push(req.body);
+      await cart.save();
+      return res.send(cart);
+    }
+    const item = cart.items.find(
+      (item) =>
+        item.base === req.body.base &&
+        item.size === req.body.size &&
+        item.sauce === req.body.sauce &&
+        item.cheese === req.body.cheese &&
+        item.veggies === req.body.veggies
+    );
+    if (item) {
+      item.quantity += req.body.quantity;
+      await cart.save();
+      return res.send(cart);
+    }
+    cart.items.push(req.body);
+    await cart.save();
+    return res.send(cart);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).send("Something went wrong!");
+  }
+});
+
+// remove item from cart
+router.delete("/", auth, async (req, res) => {
+  try {
+    let cart = await Cart.findOne({ userId: req.user._id });
+    if (!cart) return res.status(400).send("Cart not found");
+    cart.items = cart.items.filter(
+      (item) => item._id.toString() !== req.body.itemId
+    );
+    await cart.save();
+    return res.send(cart);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).send("Something went wrong!");
+  }
+});
+
+// update item quantity
+router.put("/", auth, async (req, res) => {
+  try {
+    let cart = await Cart.findOne({ userId: req.user._id });
+    if (!cart) return res.status(400).send("Cart not found");
+    const item = cart.items.find(
+      (item) => item._id.toString() === req.body.itemId
+    );
+    if (!item) return res.status(400).send("Item not found");
+    item.quantity = req.body.quantity;
+    await cart.save();
+    return res.send(cart);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).send("Something went wrong!");
+  }
+});
+
+module.exports = router;
+

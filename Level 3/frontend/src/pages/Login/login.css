@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1d;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  max-height: max-content;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../../../assets/pexels-cottonbro-studio-3944308.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+
+.main-content {
+  width: 60%;
+  background-color: #feeceb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-heading {
+  font-weight: bold;
+}
+
+.text {
+  color: #1a1a1d;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .main-content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}

@@ -3,75 +3,191 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#6f2232">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#6f2232">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Calculator with Brackets</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+        /* Add your custom styles here if needed */
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
 
-    <link rel="icon" href="./images/man.png">
+        .my-btn {
+            aspect-ratio: 1/1;
+            width: 100%;
+            border-radius: 50%;
+            font-size: 25px;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
+        .row {
+            padding: 0;
+            margin: 0;
+        }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d32649dfde.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
-
-    <title>Level 2 - Task 1</title>
+        .row>* {
+            padding: 5px;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="container" id="outer-container">
-        <div class="container" id="main-container">
-            <h3 id="header">Temprature Converter</h3>
-            <div class="container">
-                <div class="mb-3 row">
-                    <label for="temp-input" class="col-sm-3 col-form-label text-start">Temprature: </label>
-                    <div class="col-sm-9">
-                        <input id="temp-input" type="number" class="form-control" placeholder="Enter temprature">
-                        <div class="input-err" id="temp-err">
-                        </div>
-                    </div>
+    <div class="container calculator">
+        <div class="row">
+            <div class="col-9">
+                <div class="input-group mb-3" style="height: 100%;">
+                    <input type="text" class="form-control" id="display" readonly
+                        style="border-radius: 50px; font-size: 25px; height: 100%;">
                 </div>
-
-                <div class="mb-3 row">
-                    <label for="unit-input" class="col-sm-3 col-form-label text-start">Temprature In: </label>
-                    <div class="col-sm-9">
-                        <select id="unit-input" class="form-select" aria-label="Temprature in">
-                            <option value="c" selected>Celsius</option>
-                            <option value="f">Fahrenheit</option>
-                            <option value="k">Kelvin</option>
-                        </select>
-                        <div class="input-err" id="unit-err">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 row">
-                    <label for="conv-input" class="col-sm-3 col-form-label text-start">Convert to: </label>
-                    <div class="col-sm-9">
-                        <select id="conv-input" class="form-select" aria-label="Convert to">
-                            <option value="c" selected>Celsius</option>
-                            <option value="f">Fahrenheit</option>
-                            <option value="k">Kelvin</option>
-                        </select>
-                        <div class="input-err" id="conv-err">
-                        </div>
-                    </div>
-                </div>
-                <button class="btn" id="convert-btn">Convert</button>
             </div>
-            <div class="container" id="result-container">
-                <p id="result-text" class="h3">Result: <span id="result"></span>
-                </p>
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="deleteLastCharacter()"><i
+                        class="fa-solid fa-delete-left"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="clearDisplay()"
+                    style="aspect-ratio: 1/1; width: 100%;">C</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('(')">(</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay(')')">)</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <!-- <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('*')">*</button>
+            </div> -->
+            <!-- <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="deleteLastCharacter()">DEL</button>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('7')">7</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('8')">8</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('9')">9</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('*')">X</button>
+            </div>
+            <!-- <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('-')">-</button>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('4')">4</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('5')">5</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('6')">6</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <!-- <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('+')">+</button>
+            </div> -->
+        </div>
+        <div class="row">
+
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('1')">1</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('2')">2</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('3')">3</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-primary btn-block" onclick="appendToDisplay('+')">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <!-- <div class="col-3"></div> -->
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('.')">.</button>
+            </div>
+            <div class="col-3">
+                <button class="my-btn btn btn-secondary btn-block" onclick="appendToDisplay('0')">0</button>
+            </div>
+            <!-- <div class="col-3"></div> -->
+            <div class="col-6">
+                <button style="width: 100%; height: 100%; border-radius: 50px;" class="btn btn-primary btn-block"
+                    onclick="calculateResult()">=</button>
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d32649dfde.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("keydown", function (event) {
+            handleKeyboardInput(event.key);
+        });
+
+        function handleKeyboardInput(key) {
+            // List of allowed characters
+            var allowedCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/', '(', ')', '.'];
+
+            // If the pressed key is in the allowed characters list, append it to the display
+            if (allowedCharacters.includes(key)) {
+                document.getElementById('display').value += key;
+            } else if (key === 'Enter') {
+                // If the pressed key is Enter, calculate the result
+                calculateResult();
+            } else if (key === 'Backspace') {
+                // If the pressed key is Backspace, delete the last character
+                deleteLastCharacter();
+            } else if (key === 'Escape') {
+                // If the pressed key is Escape, clear the display
+                clearDisplay();
+            }
+        }
+
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function deleteLastCharacter() {
+            var currentValue = document.getElementById('display').value;
+            document.getElementById('display').value = currentValue.slice(0, -1);
+        }
+
+        function calculateResult() {
+            try {
+                var result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = parseFloat(result.toFixed(10)); // Adjust the number of decimal places as needed
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
 
 </body>
 

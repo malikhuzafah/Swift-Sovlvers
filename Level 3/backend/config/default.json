@@ -1,0 +1,4 @@
+{
+    "db": "mongodb://localhost/Level3",
+    "jwtPrivateKey": "SomePrivateKey"
+}
